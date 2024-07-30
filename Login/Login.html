@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Chinese Food Center</title>
+    <link rel="stylesheet" href="Login1.css">
+</head>
+<body>
+    <script>
+        const header = document.createElement('header');
+        const container = document.createElement('div');
+        container.className = 'container';
+        const h1 = document.createElement('h1');
+        h1.textContent = 'Chinese Food Center';
+        const nav = document.createElement('nav');
+        const ul = document.createElement('ul');
+        const menuItems = [
+            { text: 'Home', href: '../Index/Index.html' },
+            { text: 'Menus', href: '../Menu/Menu.html' },
+            { text: 'Contact', href: '../Contact/Contact.html' },
+            { text: 'Register', href: '../Register/Register.html' },
+            { text: 'Login', href: '../Login/Login.html' }
+        ];
+        menuItems.forEach(item => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = item.href;
+            a.textContent = item.text;
+            li.appendChild(a);
+            ul.appendChild(li);
+        });
+        nav.appendChild(ul);
+        container.appendChild(h1);
+        container.appendChild(nav);
+        header.appendChild(container);
+        document.body.appendChild(header);
+    </script>
+    <main>
+        <section>
+            <h2>Login to Your Account</h2>
+            <form action="#" method="post" validate >
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Chinese Food Center</p>
+    </footer>
+</body>
+</html>
+

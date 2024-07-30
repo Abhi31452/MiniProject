@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Chinese Food Center</title>
+    <link rel="stylesheet" href="Register.css">
+    <style> 
+        [type="checkbox"]{
+            height: 30px;
+            width: 30px;
+        }
+        [type="radio"]{
+            height: 30px;
+            width: 20px;
+        }
+        .errorblock{
+            color: red;
+        }
+        .password-container {
+    position: relative;
+    display: inline-block;
+}
+
+#password {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-container input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+    </style>
+        
+</head>
+<body>
+    <script>
+        const header = document.createElement('header');
+        const container = document.createElement('div');
+        container.className = 'container';
+        const h1 = document.createElement('h1');
+        h1.textContent = 'Chinese Food Center';
+        const nav = document.createElement('nav');
+        const ul = document.createElement('ul');
+        const menuItems = [
+            { text: 'Home', href: '../Index/Index.html' },
+            { text: 'Menus', href: '../Menu/Menu.html' },
+            { text: 'Contact', href: '../Contact/Contact.html' },
+            { text: 'Register', href: '../Register/Register.html' },
+            { text: 'Login', href: '../Login/Login.html' }
+        ];
+        menuItems.forEach(item => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = item.href;
+            a.textContent = item.text;
+            li.appendChild(a);
+            ul.appendChild(li);
+        });
+        nav.appendChild(ul);
+        container.appendChild(h1);
+        container.appendChild(nav);
+        header.appendChild(container);
+        document.body.appendChild(header);
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+    const showPasswordCheckbox = document.getElementById('showPassword');
+    const passwordField = document.getElementById('password');
+
+    showPasswordCheckbox.addEventListener('change', () => {
+        if (showPasswordCheckbox.checked) {
+            passwordField.type = 'text';
+        } else {
+            passwordField.type = 'password';
+        }
+    });
+});
+
+    </script>
+    <section>
+        <h1>Register</h1>
+        <div class="form-container"  >
+            <form class="form"  >
+
+                <div  >
+                    <label for="firstname "> Enter your firstname</label>
+                    <input type="text" required id="firstname" name="myname" required placeholder="Enter first name " /> 
+                </div>
+                 <div class="errorblock">
+                     <span id="error1"></span>
+                </div>
+                <br>
+                <div >
+                    <label for="lastname ">Enter last name </label>
+                    <input type="text"  id="lastname" placeholder="Enter last name " />
+                </div>
+                 <div class="errorblock">
+                    <span id="error2"></span>
+                 </div> 
+                 <br>
+                <div >
+                    <label for="age"> Enter age </label>
+                    <input type="number"  id="age" placeholder=""/>
+                </div> 
+                <div class="errorblock">
+                    <span id="error3"></span>
+                </div><br>
+                <div>
+                    <label for="phonenumber"> Enter phone number </label>
+                    <input type="number"  id="phonenumber" required maxlength="10"/>
+                </div> 
+                <div class="errorblock">
+                    <span id="error4"></span>
+                </div><br>
+                <div >
+                    <label for="email "> Enter emailid </label>
+                    <input type="email"  id="email"/>
+                </div>
+                <div class="errorblock">
+                    <span id="error5"></span>
+                </div> <br>
+                <div >
+                    <label for="pass "> Enter password </label>
+                    <input type="password" id="password" required minlength="3" maxlength="8"/>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="showPassword"/>
+                        <label for="showPassword">Show Password</label>
+                    </div>
+                </div> 
+                <div class="errorblock">
+                    <span id="error6"></span>
+                </div><br>
+                <div >
+                    <label for="cpass "> Confirm password </label>
+                    <input type="password" id="cpassword" required minlength="3" maxlength="8"/>
+                </div> 
+                <div class="errorblock">
+                    <span id="error7"></span>
+                </div><br>
+                <button type="submit" onclick="formSubmit()">Sign Up</button>
+
+            </form>
+
+            <div class="links">
+                <p>Already have an account? <a href="../Login/Login.html">Login</a></p>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Chinese Food Center. All rights reserved.</p>
+    </footer>
+    <script src="./Registration.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script> 
+
+</body>
+</html>

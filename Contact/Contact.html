@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Chinese Food Center</title>
+    <link rel="stylesheet" href="Contact.css">
+</head>
+<body>
+    <script>
+        const header = document.createElement('header');
+        const container = document.createElement('div');
+        container.className = 'container';
+        const h1 = document.createElement('h1');
+        h1.textContent = 'Chinese Food Center';
+        const nav = document.createElement('nav');
+        const ul = document.createElement('ul');
+        const menuItems = [
+            { text: 'Home', href: '../Index/Index.html' },
+            { text: 'Menus', href: '../Menu/Menu.html' },
+            { text: 'Contact', href: '../Contact/Contact.html' },
+            { text: 'Register', href: '../Register/Register.html' },
+            { text: 'Login', href: '../Login/Login.html' }
+        ];
+        menuItems.forEach(item => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = item.href;
+            a.textContent = item.text;
+            li.appendChild(a);
+            ul.appendChild(li);
+        });
+        nav.appendChild(ul);
+        container.appendChild(h1);
+        container.appendChild(nav);
+        header.appendChild(container);
+        document.body.appendChild(header);
+    </script>
+
+    <main class="contact-page">
+        <section class="contact-form">
+            <div class="title">
+                <h1>Get in Touch with Chinese Food Center</h1>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <p>We'd love to hear from you! Whether you have a question about our menu, feedback on your dining experience, or an inquiry about catering services, feel free to reach out using the form below.</p>
+                    <p>For business inquiries or reservations, please contact us directly for more information.</p>
+                </div>
+
+                <form class="form">
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <div class="important-note">
+                    <p><strong>IMPORTANT!</strong></p>
+                    <p>If you don't receive a response, please check your spam folder or contact us directly at:</p>
+                    <a href="mailto:info@chinesefoodcenter.com">info@chinesefoodcenter.com</a>
+                </div>
+            </div>
+
+            <div class="social-media">
+                <h2>Connect with Us</h2>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/chinesefoodcenter" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/icons/facebook.svg" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/chinesefoodcenter/" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/icons/instagram.svg" alt="Instagram">
+                    </a>
+                    <a href="https://twitter.com/chinesefoodcenter" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/icons/twitter.svg" alt="Twitter">
+                    </a>
+                    <a href="mailto:info@chinesefoodcenter.com">
+                        <img src="/images/icons/email.svg" alt="Email">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Chinese Food Center. All rights reserved.</p>
+    </footer>
+</body>
+</html>

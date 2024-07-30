@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menus - Chinese Food Center</title>
+    <link rel="stylesheet" href="Menu1.css">
+    <style>
+    </style>
+</head>
+<body>
+    <script>
+        const header = document.createElement('header');
+        const container = document.createElement('div');
+        container.className = 'container1';
+        const h1 = document.createElement('h1');
+        h1.textContent = 'Chinese Food Center';
+        const nav = document.createElement('nav');
+        const ul = document.createElement('ul');
+        const menuItems = [
+            { text: 'Home', href: '../Index/Index.html' },
+            { text: 'Menus', href: '../Menu/Menu.html' },
+            { text: 'Contact', href: '../Contact/Contact.html' },
+            { text: 'Register', href: '../Register/Register.html' },
+            { text: 'Login', href: '../Login/Login.html' }
+        ];
+        menuItems.forEach(item => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = item.href;
+            a.textContent = item.text;
+            li.appendChild(a);
+            ul.appendChild(li);
+        });
+        nav.appendChild(ul);
+        container.appendChild(h1);
+        container.appendChild(nav);
+        header.appendChild(container);
+        document.body.appendChild(header);
+
+
+        $(document).ready(function() {
+            let quantity = 0;
+            $('#increaseQuantity').on('click', function() {
+                    quantity += 1;
+             $('#cartQuantity').text(quantity);
+            });
+
+            $('#decreaseQuantity').on('click', function() {
+                if (quantity > 0) {
+                        quantity -= 1;
+                $('#cartQuantity').text(quantity);
+                }
+            });
+        });
+
+    </script>
+
+    <section id="menu">
+        <h1>Our Menus</h1>
+    
+        <div class="container">
+            <div class="grid-item">
+                <img src="./Images/noodles.jpeg" alt="Noodles">
+                <h2>Delicious Noodles</h2>
+                <p class="price">$8.99</p>
+                <p class="description">Enjoy our authentic Chinese noodles with a variety of fresh vegetables and savory sauces.</p>
+                <button class="quantity-btn" id="decreaseQuantity"> -</button>
+                <button class="add-to-cart" >Add to Cart</button>
+                <button class="add-to-cart1"  id="increaseQuantity">+</button>
+                <p>Quantity in Cart: <span id="cartQuantity">0</span></p>
+
+            </div>
+            <div class="grid-item">
+                <img src="./Images/dumpling.jpeg" alt="Dumplings">
+                <h2>Juicy Dumplings</h2>
+                <p class="price">$6.49</p>
+                <p class="description">Hand-made dumplings filled with juicy pork and vegetables, steamed to perfection.</p>
+               <button class="quantity-btn" id="decreaseQuantity"> -</button>
+                 <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart1"  id="increaseQuantity">+</button>
+                <p>Quantity in Cart: <span id="cartQuantity">0</span></p>
+
+            </div>
+            <div class="grid-item">
+                <img src="./Images/chickenspringroll.jpeg" alt="Chicken Spring Roll">
+                <h2>Chicken Spring Roll</h2>
+                <p class="price">$7.99</p>
+                <p class="description">Crispy spring rolls with chicken and vegetables.</p>
+                <button class="quantity-btn" id="decreaseQuantity"> -</button>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart1"  id="increaseQuantity">+</button>
+                <p>Quantity in Cart: <span id="cartQuantity">0</span></p>
+
+            </div>
+            <div class="grid-item">
+                <img src="./Images/chineseHamburge.jpeg" alt="Chinese Hamburger">
+                <h2>Chinese Hamburger</h2>
+                <p class="price">$7.99</p>
+                <p class="description">Juicy Chinese-style hamburger with a flavorful patty.</p>
+                <button class="quantity-btn" id="decreaseQuantity"> -</button>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart1"  id="increaseQuantity">+</button>
+                <p>Quantity in Cart: <span id="cartQuantity">0</span></p>
+
+            </div>
+            <div class="grid-item">
+                <img src="./Images/Hot Pot.jpeg" alt="Hot Pot">
+                <h2>Hot Pot</h2>
+                <p class="price">$7.99</p>
+                <p class="description">Hot pot with a variety of meats and vegetables.</p>
+                <button class="quantity-btn" id="decreaseQuantity"> -</button>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart1"  id="increaseQuantity">+</button>
+                <p>Quantity in Cart: <span id="cartQuantity">0</span></p>
+
+            </div>
+            <div class="grid-item">
+                <img src="./Images/Steamed Pork Buns.jpeg" alt="Steamed Pork Buns">
+                <h2>Steamed Pork Buns</h2>
+                <p class="price">$7.99</p>
+                <p class="description">Soft steamed buns filled with savory pork.</p>
+                <button class="quantity-btn" id="decreaseQuantity"> -</button>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart1"  id="increaseQuantity">+</button>
+                <p>Quantity in Cart: <span id="cartQuantity">0</span></p>
+
+            </div>
+            <div class="grid-item">
+                <img src="./Images/TripleNoodles.jpeg" alt="Triple Noodles">
+                <h2>Triple Noodles</h2>
+                <p class="price">$7.99</p>
+                <p class="description">Noodles with a triple mix of vegetables and meat.</p>
+                <button class="quantity-btn" id="decreaseQuantity"> -</button>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart1"  id="increaseQuantity">+</button>
+                <p>Quantity in Cart: <span id="cartQuantity">0</span></p>
+
+            </div>
+            <div class="grid-item">
+                <img src="./Images/EggRice.jpeg" alt="Egg Rice">
+                <h2>Egg Rice</h2>
+                <p class="price">$7.99</p>
+                <p class="description">Egg rice with a mix of vegetables and meat.</p>
+                <button class="quantity-btn" id="decreaseQuantity"> -</button>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart1"  id="increaseQuantity">+</button>
+                <p>Quantity in Cart: <span id="cartQuantity">0</span></p>
+
+            </div>
+            <div class="grid-item">
+                <img src="./Images/Chicken soup.jpeg" alt="Chicken Soup">
+                <h2>Chicken Soup</h2>
+                <p class="price">$7.99</p>
+                <p class="description">Hearty chicken soup with fresh ingredients.</p>
+                <button class="quantity-btn" id="decreaseQuantity"> -</button>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart1"  id="increaseQuantity">+</button>
+                <p>Quantity in Cart: <span id="cartQuantity">0</span></p>
+
+            </div>
+            <div class="grid-item">
+                <img src="./Images/Kung Pao Chicken.jpeg" alt="Kung Pao Chicken">
+                <h2>Kung Pao Chicken</h2>
+                <p class="price">$7.99</p>
+                <p class="description">Spicy Kung Pao chicken with peanuts and vegetables.</p>
+                <button class="quantity-btn" id="decreaseQuantity"> -</button>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="add-to-cart1"  id="increaseQuantity">+</button>
+                <p>Quantity in Cart: <span id="cartQuantity">0</span></p>
+
+            </div>
+    
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Chinese Food Center. All rights reserved.</p>
+    </footer>
+   
+   
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+   <SCRIPT>
+     
+   </SCRIPT>
+</body>
+</html>
