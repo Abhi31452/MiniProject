@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chinese Food Center</title>
+    <link rel="stylesheet" href="Index/Index.css">
+</head>
+<body>
+   
+    <script>
+        const header = document.createElement('header');
+        const container = document.createElement('div');
+        container.className = 'container';
+        const h1 = document.createElement('h1');
+        h1.textContent = 'Chinese Food Center';
+        const nav = document.createElement('nav');
+        const ul = document.createElement('ul');
+        const menuItems = [
+        { text: 'Home', href: 'Index.html' },
+            { text: 'Menus', href: 'Menu.html' },
+            { text: 'Contact', href: 'Contact.html' },
+            { text: 'Register', href: 'Register.html' },
+            { text: 'Login', href: 'Login.html' }
+        ];
+        menuItems.forEach(item => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = item.href;
+            a.textContent = item.text;
+            li.appendChild(a);
+            ul.appendChild(li);
+        });
+        nav.appendChild(ul);
+        container.appendChild(h1);
+        container.appendChild(nav);
+        header.appendChild(container);
+        document.body.appendChild(header);
+    </script>
+
+    
+    <section class="welcome">
+        <div class="container">
+            <div id="video1" class="video" >
+                <video autoplay loop style="width: 100%; " >
+                    <source src="Index/Video/Chinese.mp4" type="video/mp4">
+                  </video> 
+             </div>
+            <h2>Welcome to Chinese Food Center</h2>
+            <p>We serve delicious Chinese cuisine made with fresh ingredients.</p>
+            <a  class="btn" href="Menu.html">View Menu</a>
+
+           
+            <div class="block2">
+                
+            <div class="f1" id="flexb"> 
+                <h3> Sweet and sour pork</h3>
+                <img src="Index/Images/sweet and sour pork.jpeg"> 
+                <h3> Price :  55$ 
+        
+                </h3>
+                <p> About :  <br> It is a classical Chinese dish with pork loin and pineapple as main ingredients. Fried pieces of pork are stewed in a sauce with a vegetable mixture and pineapples. Also, canned pineapple and its juice make the dish sweeter</p> 
+            </div> 
+             <div class="f1" id="flexb"> 
+                <h3> Mapu Tofu</h3>
+                <img src="Index/Images/tofu.jpeg"> 
+                <h3> Price : 40$</h3>
+                <p> About :<br>
+                    Mapo tofu is a popular Chinese dish from Sichuan province. It consists of tofu set in a spicy sauce, typically a thin, oily, and bright red suspension, based on douban, and douchi, along with
+            minced meat. </p>
+               </div> 
+            <div class="f1" id="flexb">
+                 <h3>Spring Rolls </h3>
+                <img  src="Index/Images/rolls.jpeg"> 
+                <h3> Price : 30$ </h3>
+                <p> About : <br>Spring rolls are rolled appetizers or dim sum commonly found in Chinese and Southeast Asian cuisines. The kind of wrapper, fillings, and cooking technique used, as well as the name, vary considerably depending on the region's culture,  </p>  
+            </div> 
+        </div>
+
+    </section>
+
+    <section class="contents">
+        <div class="container">
+            <h2>Our Specialties</h2>
+            <p>Discover a wide range of authentic Chinese dishes.</p>
+        </div>
+    </section>
+
+    <section class="image-info-order">
+        <div class="container">
+            <h2>Image Gallery</h2>
+            <img src="Index/Images/C1.jpg">
+            <img src="Index/Images/C2.jpg">
+            <img src="Index/Images/C3.jpg">
+            <img src="Index/Images/C4.jpg">
+            <p>Place your order now for delivery or pickup!</p>
+            <a href="Menu.html" class="btn">Order Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Chinese Food Center. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
