@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Chinese Food Center</title>
-    <link rel="stylesheet" href="Login1.css">
+    <link rel="stylesheet" href="Login/Login1.css">
 </head>
+
 <body>
     <script>
         const header = document.createElement('header');
@@ -16,11 +18,11 @@
         const nav = document.createElement('nav');
         const ul = document.createElement('ul');
         const menuItems = [
-            { text: 'Home', href: '../Index/Index.html' },
-            { text: 'Menus', href: '../Menu/Menu.html' },
-            { text: 'Contact', href: '../Contact/Contact.html' },
-            { text: 'Register', href: '../Register/Register.html' },
-            { text: 'Login', href: '../Login/Login.html' }
+            { text: 'Home', href: 'Index.html' },
+            { text: 'Menus', href: 'Menu.html' },
+            { text: 'Contact', href: 'Contact.html' },
+            { text: 'Register', href: 'Register.html' },
+            { text: 'Login', href: 'Login.html' }
         ];
         menuItems.forEach(item => {
             const li = document.createElement('li');
@@ -39,7 +41,7 @@
     <main>
         <section>
             <h2>Login to Your Account</h2>
-            <form action="#" method="post" validate >
+            <form action="#" method="post" validate>
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required>
                 <label for="password">Password:</label>
@@ -52,5 +54,5 @@
         <p>&copy; 2024 Chinese Food Center</p>
     </footer>
 </body>
-</html>
 
+</html>

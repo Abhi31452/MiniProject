@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,6 +18,7 @@ body {
     margin: 0 auto;
     padding: 10px;
 }
+
 header {
     background-color: #d32f2f;
     color: #fff;
@@ -72,7 +73,8 @@ nav ul li a:hover {
     padding: 40px 0;
     text-align: center;
 }
-.image-info-order img{
+
+.image-info-order img {
     display: inline;
     height: 300px;
     width: 350px;
@@ -95,7 +97,8 @@ nav ul li a:hover {
 .welcome .btn:hover {
     background-color: #da6f0b;
 }
-.f1:hover{
+
+.f1:hover {
     transform: scale(1.05);
 }
 
@@ -110,49 +113,54 @@ footer p {
     font-size: 0.9rem;
 }
 
- .block2 {
-            display: flex;
-            flex-wrap: wrap; 
-            gap: 20px; 
-            justify-content: center; 
-            padding: 20px;
-        }
+.block2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
 
-        .f1 {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            width: 300px;
-            text-align: center;
-            padding: 15px;
-        }
+.f1 {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    padding: 15px;
+}
 
-        .f1 img {
-            width: 100%;
-            height: 300px;
-            border-bottom: 2px solid #ddd;
-        }
+.f1 img {
+    width: 100%;
+    height: 300px;
+    border-bottom: 2px solid #ddd;
+}
 
-        .f1 h3, .f1 h4, .f1 p {
-            margin: 10px 0;
-        }
+.f1 h3,
+.f1 h4,
+.f1 p {
+    margin: 10px 0;
+}
 
-        .f1 h4 {
-            color: #555;
-        }
+.f1 h4 {
+    color: #555;
+}
 
-      
+
 @media (max-width: 800px) {
     .container {
         padding: 100px;
     }
+
     header h1 {
         font-size: 1.5rem;
     }
+
     .welcome h2 {
         font-size: 2rem;
     }
+
     .welcome .btn,
     .image-info-order .btn {
         padding: 8px 16px;

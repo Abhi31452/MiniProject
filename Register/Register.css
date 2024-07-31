@@ -68,9 +68,9 @@ section h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-container label{
+.form-container label {
     font-size: 1.2rem;
-    text-decoration: solid ;
+    text-decoration: solid;
 }
 
 input[type="text"],
@@ -169,4 +169,3 @@ div {
 #password {
     padding-right: 30px;
 }
-

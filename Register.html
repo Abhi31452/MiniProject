@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register - Chinese Food Center</title>
-    <link rel="stylesheet" href="Register.css">
-    <style> 
-        [type="checkbox"]{
+    <link rel="stylesheet" href="Register/Register.css">
+    <style>
+        [type="checkbox"] {
             height: 30px;
             width: 30px;
         }
-        [type="radio"]{
+
+        [type="radio"] {
             height: 30px;
             width: 20px;
         }
-        .errorblock{
+
+        .errorblock {
             color: red;
         }
+
         .password-container {
-    position: relative;
-    display: inline-block;
-}
+            position: relative;
+            display: inline-block;
+        }
 
-#password {
-    display: block;
-    margin-bottom: 10px;
-}
+        #password {
+            display: block;
+            margin-bottom: 10px;
+        }
 
-.checkbox-container {
-    display: flex;
-    align-items: center;
-}
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+        }
 
-.checkbox-container input[type="checkbox"] {
-    margin-right: 5px;
-}
-
+        .checkbox-container input[type="checkbox"] {
+            margin-right: 5px;
+        }
     </style>
-        
+
 </head>
+
 <body>
     <script>
         const header = document.createElement('header');
@@ -49,11 +53,11 @@
         const nav = document.createElement('nav');
         const ul = document.createElement('ul');
         const menuItems = [
-            { text: 'Home', href: '../Index/Index.html' },
-            { text: 'Menus', href: '../Menu/Menu.html' },
-            { text: 'Contact', href: '../Contact/Contact.html' },
-            { text: 'Register', href: '../Register/Register.html' },
-            { text: 'Login', href: '../Login/Login.html' }
+            { text: 'Home', href: 'Index.html' },
+            { text: 'Menus', href: 'Menu.html' },
+            { text: 'Contact', href: 'Contact.html' },
+            { text: 'Register', href: 'Register.html' },
+            { text: 'Login', href: 'Login.html' }
         ];
         menuItems.forEach(item => {
             const li = document.createElement('li');
@@ -70,76 +74,76 @@
         document.body.appendChild(header);
 
         document.addEventListener('DOMContentLoaded', (event) => {
-    const showPasswordCheckbox = document.getElementById('showPassword');
-    const passwordField = document.getElementById('password');
+            const showPasswordCheckbox = document.getElementById('showPassword');
+            const passwordField = document.getElementById('password');
 
-    showPasswordCheckbox.addEventListener('change', () => {
-        if (showPasswordCheckbox.checked) {
-            passwordField.type = 'text';
-        } else {
-            passwordField.type = 'password';
-        }
-    });
-});
+            showPasswordCheckbox.addEventListener('change', () => {
+                if (showPasswordCheckbox.checked) {
+                    passwordField.type = 'text';
+                } else {
+                    passwordField.type = 'password';
+                }
+            });
+        });
 
     </script>
     <section>
         <h1>Register</h1>
-        <div class="form-container"  >
-            <form class="form"  >
+        <div class="form-container">
+            <form class="form">
 
-                <div  >
+                <div>
                     <label for="firstname "> Enter your firstname</label>
-                    <input type="text" required id="firstname" name="myname" required placeholder="Enter first name " /> 
+                    <input type="text" required id="firstname" name="myname" required placeholder="Enter first name " />
                 </div>
-                 <div class="errorblock">
-                     <span id="error1"></span>
+                <div class="errorblock">
+                    <span id="error1"></span>
                 </div>
                 <br>
-                <div >
+                <div>
                     <label for="lastname ">Enter last name </label>
-                    <input type="text"  id="lastname" placeholder="Enter last name " />
+                    <input type="text" id="lastname" placeholder="Enter last name " />
                 </div>
-                 <div class="errorblock">
+                <div class="errorblock">
                     <span id="error2"></span>
-                 </div> 
-                 <br>
-                <div >
+                </div>
+                <br>
+                <div>
                     <label for="age"> Enter age </label>
-                    <input type="number"  id="age" placeholder=""/>
-                </div> 
+                    <input type="number" id="age" placeholder="" />
+                </div>
                 <div class="errorblock">
                     <span id="error3"></span>
                 </div><br>
                 <div>
                     <label for="phonenumber"> Enter phone number </label>
-                    <input type="number"  id="phonenumber" required maxlength="10"/>
-                </div> 
+                    <input type="number" id="phonenumber" required maxlength="10" />
+                </div>
                 <div class="errorblock">
                     <span id="error4"></span>
                 </div><br>
-                <div >
+                <div>
                     <label for="email "> Enter emailid </label>
-                    <input type="email"  id="email"/>
+                    <input type="email" id="email" />
                 </div>
                 <div class="errorblock">
                     <span id="error5"></span>
                 </div> <br>
-                <div >
+                <div>
                     <label for="pass "> Enter password </label>
-                    <input type="password" id="password" required minlength="3" maxlength="8"/>
+                    <input type="password" id="password" required minlength="3" maxlength="8" />
                     <div class="checkbox-container">
-                        <input type="checkbox" id="showPassword"/>
+                        <input type="checkbox" id="showPassword" />
                         <label for="showPassword">Show Password</label>
                     </div>
-                </div> 
+                </div>
                 <div class="errorblock">
                     <span id="error6"></span>
                 </div><br>
-                <div >
+                <div>
                     <label for="cpass "> Confirm password </label>
-                    <input type="password" id="cpassword" required minlength="3" maxlength="8"/>
-                </div> 
+                    <input type="password" id="cpassword" required minlength="3" maxlength="8" />
+                </div>
                 <div class="errorblock">
                     <span id="error7"></span>
                 </div><br>
@@ -148,7 +152,7 @@
             </form>
 
             <div class="links">
-                <p>Already have an account? <a href="../Login/Login.html">Login</a></p>
+                <p>Already have an account? <a href="Login.html">Login</a></p>
             </div>
         </div>
 
@@ -157,9 +161,10 @@
     <footer>
         <p>&copy; 2024 Chinese Food Center. All rights reserved.</p>
     </footer>
-    <script src="./Registration.js"></script>
+    <script src="Register/Registration.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 
 </body>
+
 </html>

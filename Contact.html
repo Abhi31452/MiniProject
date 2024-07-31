@@ -1,12 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Chinese Food Center</title>
-    <link rel="stylesheet" href="Contact.css">
+    <link rel="stylesheet" href="Contact/Contact.css">
 </head>
+
 <body>
     <script>
         const header = document.createElement('header');
@@ -17,11 +18,11 @@
         const nav = document.createElement('nav');
         const ul = document.createElement('ul');
         const menuItems = [
-            { text: 'Home', href: '../Index/Index.html' },
-            { text: 'Menus', href: '../Menu/Menu.html' },
-            { text: 'Contact', href: '../Contact/Contact.html' },
-            { text: 'Register', href: '../Register/Register.html' },
-            { text: 'Login', href: '../Login/Login.html' }
+            { text: 'Home', href: 'Index.html' },
+            { text: 'Menus', href: 'Menu.html' },
+            { text: 'Contact', href: 'Contact.html' },
+            { text: 'Register', href: 'Register.html' },
+            { text: 'Login', href: 'Login.html' }
         ];
         menuItems.forEach(item => {
             const li = document.createElement('li');
@@ -46,7 +47,9 @@
 
             <div class="contact-container">
                 <div class="contact-info">
-                    <p>We'd love to hear from you! Whether you have a question about our menu, feedback on your dining experience, or an inquiry about catering services, feel free to reach out using the form below.</p>
+                    <p>We'd love to hear from you! Whether you have a question about our menu, feedback on your dining
+                        experience, or an inquiry about catering services, feel free to reach out using the form below.
+                    </p>
                     <p>For business inquiries or reservations, please contact us directly for more information.</p>
                 </div>
 
@@ -105,4 +108,5 @@
         <p>&copy; 2024 Chinese Food Center. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

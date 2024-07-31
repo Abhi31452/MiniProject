@@ -153,19 +153,19 @@ function validateAll() {
     return r1 && r2 && r3 && r4 && r5 && r6 && r7;
 }
 
-function formSubmit(){
-if (validateAll()) {
-    submitPopup();
-}else{
-    alert("error");
-}
+function formSubmit() {
+    if (validateAll()) {
+        submitPopup();
+    } else {
+        alert("error");
+    }
 }
 
 function submitPopup() {
     window.alert('Sign up button clicked!');
 }
-$(document).ready(function() {
-    $('#showPassword').on('change', function() {
+$(document).ready(function () {
+    $('#showPassword').on('change', function () {
         const passwordField = $('#password');
         const isChecked = $(this).is(':checked');
         passwordField.attr('type', isChecked ? 'text' : 'password');
